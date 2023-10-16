@@ -35,7 +35,7 @@ jobs:
       - name: Install lint with Ruff
         run: pip install ruff
       - name: lint check of code
-        run: chartboost/ruff-action@v1
+        uses: chartboost/ruff-action@v1
   
   
       
