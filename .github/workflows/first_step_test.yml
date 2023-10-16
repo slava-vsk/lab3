@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get repositoty code
-        uses:  actions/chechout@v3
+        uses: actions/chechout@v3
       - name: For set up Python
         uses: actions/setup-python@v4
         with:
