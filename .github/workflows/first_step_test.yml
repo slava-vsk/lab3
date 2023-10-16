@@ -1,0 +1,22 @@
+name: Deploy my script
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repositoty code
+        uses:  actions/chechout@v3
+      - name: For set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: nub Pip
+        run: pip install --upgrade pip
+      - name: Install pytest
+        run: pip install pytest
+      - name: Install lint with Ruff
+        run: pip install ruff
+      - name: Test my application
+        run: echo "need my test app"
+      
+      
