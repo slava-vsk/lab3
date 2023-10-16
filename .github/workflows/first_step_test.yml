@@ -19,5 +19,24 @@ jobs:
       - name: Test my application
         run: echo "need my test app"
           # pytest -s cc_calc_lab3.py
+  mylinter:
+   runs-on: ubuntu-latest
+   steps:
+      - name: Get repositoty code
+        uses: actions/checkout@v3
+      - name: For set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: nub Pip
+        run: pip install --upgrade pip
+      - name: Install pytest
+        run: pip install pytest
+      - name: Install lint with Ruff
+        run: pip install ruff
+      - name: lint check of code
+        run: chartboost/ruff-action@v1
+  
+  
       
       
